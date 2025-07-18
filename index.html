@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Боковая панель -->
+        <div class="sidebar">
+            <button id="addTaskBtn">Добавить задачу</button>
+            <input type="button" id="searchBtn" value="Поиск">
+            <div id="searchResults"></div>
+            <button id="allBtn">Все</button>
+            <button id="activeBtn">Активные</button>
+            <button id="completedBtn">Завершенные</button>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="main-content">
+            <!-- Контейнер для задач "Все" -->
+            <div id="allTasks" class="task-list-container">
+                <ul id="allTaskList"></ul>
+            </div>
+
+            <!-- Контейнер для задач "Активные" -->
+            <div id="activeTasks" class="task-list-container" style="display: none;">
+                <ul id="activeTaskList"></ul>
+            </div>
+
+            <!-- Контейнер для задач "Завершенные" -->
+            <div id="completedTasks" class="task-list-container" style="display: none;">
+                <ul id="completedTaskList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для добавления задачи -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Добавить задачу</h2>
+            <input type="text" id="taskTitle" placeholder="Название задачи">
+            <textarea id="taskDescription" placeholder="Описание задачи"></textarea>
+            <button id="saveTaskBtn">Сохранить задачу</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для просмотра задачи -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content" style="max-width: 800px;">
+            <span id="closeTaskModal" class="close">&times;</span>
+            <h2 id="taskModalTitle"></h2>
+            <p id="taskModalDescription"></p>
+            <textarea id="taskComment" placeholder="Комментировать"></textarea>
+        </div>
+    </div>
+
+    <!-- Модальное окно для поиска -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span id="closeSearchModal" class="close">&times;</span>
+            <h2>Поиск задачи</h2>
+            <input type="text" id="searchInput" placeholder="Введите название задачи">
+            <div id="searchHistory">
+                <h3>Последние запросы:</h3>
+                <ul id="searchHistoryList"></ul>
+            </div>
+            <button id="searchExecuteBtn">Поиск</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для подтверждения удаления задачи -->
+    <div id="deleteConfirmationModal" class="modal">
+        <div class="modal-content">
+            <span id="closeDeleteConfirmationModal" class="close">&times;</span>
+            <h2>Вы уверены, что хотите удалить эту задачу?</h2>
+            <button id="confirmDeleteBtn">Удалить</button>
+            <button id="cancelDeleteBtn">Отмена</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
