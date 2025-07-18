@@ -1,0 +1,15 @@
+# Для исключения node_modules (если используется npm)
+node_modules/
+
+# Лог файлы
+*.log
+
+# Системные файлы macOS
+.DS_Store
+
+# Системные файлы Windows
+Thumbs.db
+
+# Временные файлы редакторов
+*.swp
+*.swo
