@@ -26,3 +26,11 @@
    cd PracticeTodoList
 
 3. Откройте файл index.html в вашем браузере. Приложение будет доступно для    использования.
+
+## Публикация:
+
+Приложение также доступно онлайн через GitHub Pages. Вы можете открыть его по следующей ссылке:
+
+[https://quazerbee.github.io/PracticeTodoList](https://quazerbee.github.io/PracticeTodoList)
+
+Просто откройте ссылку в браузере, и приложение будет доступно для использования.
